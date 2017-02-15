@@ -1,10 +1,8 @@
 FROM node:slim
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /opt/app-root/src
 
-COPY . /usr/src/app
+COPY . /opt/app-root/src
 RUN npm install
 
 EXPOSE 8080
-CMD ["node", "index.js"]
